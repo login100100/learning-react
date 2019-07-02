@@ -4,6 +4,7 @@ import './App.css';
 
 // import components
 import Posts from './components/Posts';
+import PostForm from './components/PostForm';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
           Learn React
         </a>
       </header>
+      <PostForm />
+      <br />
       <Posts />
     </div>
   );
