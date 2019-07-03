@@ -1,26 +1,15 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-
+import { connect } from 'react-redux';
+import { fetchPosts } from '../actions/posts.actions';
 
 class Posts extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            posts: []
-        }
-    }
-
     componentDidMount() {
-        axios.get('http://localhost:4000/posts')
-        .then(res => res.data)
-        .then(parsedResponse => this.setState({
-            posts: parsedResponse
-        }));
+        this.props.fetchPosts();
     }
 
     render() {
-        const posts = this.state.posts.map(post => (
+        const posts = this.props.posts.map(post => (
             <div key={ post.id } >
                 <h2>
                     { post.title }
@@ -40,4 +29,8 @@ class Posts extends Component {
     }
 }
 
-export default Posts;
+const mapStateToProps = state => ({
+    posts: state.posts.posts  // posts from post.reducer file
+});
+
+export default connect(mapStateToProps, { fetchPosts })(Posts);
