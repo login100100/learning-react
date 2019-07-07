@@ -12,6 +12,12 @@ export default function (state = initialState, action) {
                 ...state,
                 posts: action.payload
             };
+        case ActionTypes.POSTS.NEW_POST:
+            // could refetch data
+            return {
+                ...state,
+                post: action.payload
+            }
         default:
             return { ...state};
     }

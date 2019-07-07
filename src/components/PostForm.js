@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
-import axios from 'axios';
+import { connect } from 'react-redux'
+import { createPost } from '../actions/posts.actions'
+import { PropTypes } from 'prop-types'
+
 
 class PostForm extends Component {
     constructor(props) {
@@ -25,12 +28,7 @@ class PostForm extends Component {
             description: this.state.description
         }
 
-        axios.post('http://localhost:4000/posts', JSON.stringify(post), {
-            headers: {
-                'content-type': 'application/json'
-            }
-        })
-        .then(data => console.log(data));
+        this.props.createPost(post);
     }
 
 
@@ -56,4 +54,8 @@ class PostForm extends Component {
     }
 }
 
-export default PostForm;
+PostForm.propTypes = {
+    createPost: PropTypes.func.isRequired
+};
+
+export default connect(null, { createPost })(PostForm);

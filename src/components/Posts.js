@@ -8,6 +8,12 @@ class Posts extends Component {
         this.props.fetchPosts();
     }
 
+    componentWillReceiveProps(propReceived) {
+        if(propReceived.newPost) {
+            this.props.posts.unshift(propReceived.newPost);
+        }
+    }
+
     render() {
         const posts = this.props.posts.map(post => (
             <div key={ post.id } >
@@ -30,7 +36,8 @@ class Posts extends Component {
 }
 
 const mapStateToProps = state => ({
-    posts: state.posts.posts  // posts from post.reducer file
+    posts: state.posts.posts,  // posts from post.reducer file
+    newPost: state.posts.post
 });
 
 export default connect(mapStateToProps, { fetchPosts })(Posts);
