@@ -9,6 +9,7 @@ import store from './store';
 // import components
 import Posts from './components/Posts';
 import PostForm from './components/PostForm';
+import LoginForm from './components/LoginForm';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             Learn React
           </a>
         </header>
+        <LoginForm />
         <PostForm />
         <br />
         <Posts />

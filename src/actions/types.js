@@ -2,3 +2,9 @@ export const POSTS = {
     FETCH_POSTS: 'FETCH_POSTS',
     NEW_POST: 'NEW_POST'
 }
+
+export const LOGIN = {
+    LOGIN_SUBMIT: 'LOGIN_SUBMIT',
+    LOGIN_SUCCESS: 'LOGIN_SUCCESS',
+    LOGIN_ERROR: 'LOGIN_ERROR'
+}
