@@ -1,4 +1,6 @@
+// packages
 import React from 'react';
+import { Route, Link } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 
@@ -7,8 +9,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 // import components
-import Posts from './components/Posts';
-import PostForm from './components/PostForm';
+import PostsPage from './components/PostsPage';
 import LoginForm from './components/LoginForm';
 import Alert from './components/Alert';
 
@@ -30,11 +31,11 @@ function App() {
             Learn React
           </a>
         </header>
+          <Link to="/login">Login page</Link>
+          <Link to="/posts">Posts page</Link>
+        <Route path="/posts" component={PostsPage}/>
+        <Route path="/login" component={LoginForm}/>
         <Alert />
-        <LoginForm />
-        <PostForm />
-        <br />
-        <Posts />
       </div>
     </Provider>
   );
