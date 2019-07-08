@@ -28,7 +28,7 @@ export function setupFakeBackend() {
                         text: () => Promise.resolve(JSON.stringify(response))
                     });
                 } else {
-                    reject('Unauthorized')
+                    reject('Username or password incorrect');
                 }
             }
         }, 1000);

@@ -10,6 +10,7 @@ import store from './store';
 import Posts from './components/Posts';
 import PostForm from './components/PostForm';
 import LoginForm from './components/LoginForm';
+import Alert from './components/Alert';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             Learn React
           </a>
         </header>
+        <Alert />
         <LoginForm />
         <PostForm />
         <br />

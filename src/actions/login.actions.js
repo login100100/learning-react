@@ -32,5 +32,18 @@ export const login = loginData => dispatch => {
             type: ACTIONS.LOGIN.LOGIN_SUCCESS,
             payload: user
         });
+        dispatch({
+            type: ACTIONS.ALERT.SUCCESS,
+            payload: 'Login succesfull!'
+        });
+    }, (error) => {
+        dispatch({
+            type: ACTIONS.LOGIN.LOGIN_FAILURE,
+            payload: error
+        });
+        dispatch({
+            type: ACTIONS.ALERT.ERROR,
+            payload: error
+        });
     });
 }

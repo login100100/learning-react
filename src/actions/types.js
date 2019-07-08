@@ -6,5 +6,11 @@ export const POSTS = {
 export const LOGIN = {
     LOGIN_SUBMIT: 'LOGIN_SUBMIT',
     LOGIN_SUCCESS: 'LOGIN_SUCCESS',
-    LOGIN_ERROR: 'LOGIN_ERROR'
+    LOGIN_FAILURE: 'LOGIN_FAILURE'
+}
+
+export const ALERT = {
+    SUCCESS: 'ALERT_SUCCESS',
+    ERROR: 'ALERT_ERROR',
+    CLEAR: 'ALERT_CLEAR'
 }
