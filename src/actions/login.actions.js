@@ -1,5 +1,4 @@
 import * as ACTIONS from './types'
-import axios from 'axios';
 
 export const login = loginData => dispatch => {
     dispatch({

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 // redux
 import { Provider } from 'react-redux';

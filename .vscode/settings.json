@@ -1,0 +1,8 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.activeIconPack": "react_redux",
+    "material-icon-theme.files.associations": {
+        "webpack.*.js": "webpack"
+    },
+    "material-icon-theme.showUpdateMessage": true
+}
