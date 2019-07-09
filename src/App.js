@@ -1,7 +1,7 @@
 // packages
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
-import logo from './logo.svg';
+import { Route } from 'react-router-dom';
+// import logo from './logo.svg';
 import './App.scss';
 
 // redux

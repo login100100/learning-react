@@ -5,9 +5,6 @@ import logo from '../logo.svg';
 import '../styles/navbar.scss';
 
 class NavBar extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (
@@ -17,7 +14,7 @@ class NavBar extends Component {
                         <img src={logo} className="App-logo logo" alt="logo" />
                     </div>
                     <span className="navbar__logo-description">
-                        React test app
+                        <Link to="/" className="navbar__logo-description-link">React test app</Link>                        
                     </span>
                 </div>
                 <ul className="navbar__links">
