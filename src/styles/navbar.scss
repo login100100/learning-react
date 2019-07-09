@@ -1,0 +1,46 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background-color: #282c34;
+    width: 100%;
+
+    &__logo {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 5px 10px;
+
+        &-image {
+            .logo {
+                height: 50px;
+            }
+        }
+        &-description {
+            font-size: 22px;
+            font-weight: bold;
+            margin: auto 0;
+            color: #61DAFB;
+        }
+    }
+
+    &__links {
+        list-style: none;
+        display: flex;
+
+        &-item {
+            margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #61DAFB;
+            font-size: 16px;
+            font-weight: bold;
+
+            &-link {
+                text-decoration: none;
+                &:visited {
+                    color: inherit;
+                }
+            }
+        }
+    }
+}

@@ -12,12 +12,13 @@ import store from './store';
 import PostsPage from './components/PostsPage';
 import LoginForm from './components/LoginForm';
 import Alert from './components/Alert';
+import NavBar from './components/Navbar';
 
 function App() {
   return (
     <Provider store={ store }>
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
@@ -30,9 +31,8 @@ function App() {
           >
             Learn React
           </a>
-        </header>
-          <Link to="/login">Login page</Link>
-          <Link to="/posts">Posts page</Link>
+        </header> */}
+        <NavBar />
         <Route path="/posts" component={PostsPage}/>
         <Route path="/login" component={LoginForm}/>
         <Alert />
